@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dt {font-weight: bold;}
+        /* dt元素加粗 */
+        li {list-style-type: none;}
+        /* 去除列表默认样式 */
+        /* CSS 属性 list-style-type 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式） */    
+    </style>
+</head>
+<body>
+    <h1>Git的使用</h1>
+    <h2>一、Git基础</h2>
+    <p>Git是目前世界上最先进的<strong>分布式版本控制系统</strong>。</p>
+    <p>安装成功后在开始菜单中会有Git项，菜单下有3个程序：</p>
+    <ul>
+        <li><strong>Git Bash</strong>：Unix与Linux风格的命令行，使用最多，推荐最多</li>
+        <li><strong>Git CMD</strong>：Windows风格的命令行</li>
+        <li><strong>Git GUI</strong>：图形界面的Git，不建议初学者使用，尽量先熟悉常用命令</li>
+    </ul>
+    <p><strong>任意文件夹下右键也可以看到对应的程序。</strong></p>
+    <hr>
+    <p>我们最常使用 Git Bash，故学习一些常用的 Linux 指令。</p>
+    <h3>常用的Linux命令</h3>
+    <ul>
+        <li><strong>cd</strong>：改变目录。</li>
+        <li><strong>cd ..</strong>：回退到上一个目录，直接cd进入默认目录。</li>
+        <li><strong>pwd</strong>：显示当前所在的目录路径。</li>
+        <li><strong>ls（或ll）</strong>：都是列出当前目录中的所有文件，只不过ll(两个ll)列出的内容更为详细。</li>
+        <li><strong>touch</strong>：新建一个文件 如 touch index.js 就会在当前目录下新建一个index.js文件。</li>
+        <li><strong>rm</strong>：删除一个文件, rm index.js 就会把index.js文件删除。</li>
+        <li><strong>mkdir</strong>：新建一个目录,就是新建一个文件夹。</li>
+        <li><strong>rm -r</strong>：删除一个文件夹, rm -r src 删除src目录。</li>
+        <pre>rm -rf / 切勿在Linux中尝试！会删除电脑中全部文件!</pre>
+        <li><strong>mv</strong>：移动文件, mv index.html src index.html 是我们要移动的文件, src 是目标文件夹,当然, 这样写,必须保证文件和目标文件夹在同一目录下。</li>
+        <li><strong>reset</strong>：重新初始化终端/清屏。</li>
+        <li><strong>clear</strong>：清屏。</li>
+        <li><strong>history</strong>：查看命令历史。</li>
+        <li><strong>help</strong>：帮助。</li>
+        <li><strong>exit</strong>：退出。</li>
+        <li><strong>#</strong>：表示注释。</li>
+    </ul>
+    <hr>
+    <h2>二、Git 理论</h2>
+    <dl>
+        <dt>Git 本地工作区：</dt>
+        <dd>工作目录(Working Directory)</dd>
+        <dd>暂存区(Stage/Index)</dd>
+        <dd>资源库(Repository或Git Directory)</dd>
+        <dt>Git 远程仓库(Remote Directory)</dt>
+    </dl>
+    <p>文件在这四个工作区域之间的转换关系如下：</p>
+    <img src="images/640.png">
+    <p>git管理的文件有三种状态：已修改（modified）,已暂存（staged）,已提交(committed)</p>
+    <hr>
+    <h2>三、Git 实操</h2>
+    <h3>Git config（配置）</h3>
+    <strong>所有的配置文件，其实都保存在本地</strong>
+   
+    <dl>
+        <dt>git config -l</dt>
+        <dd>查看配置(config)</dd>
+        <dt>git config --system --list</dt>
+        <dd>查看系统config</dd>
+        <dt>git config --global  --list</dt>
+        <dd>查看当前用户（global）配置</dd>
+        <dt>git config --global user.name "thatsme"</dt>
+        <dd>设置用户名</dd>
+        <dd>用户名中有空格时需要引号</dd>
+        <dt>git config --global user.email thatsme@qq.com</dt>
+        <dd>设置邮箱</dd>
+        <dd>如果你传递了--global 选项，Git将总是会使用该信息来处理你在系统中所做的一切操作。<br>
+            如果你希望在一个特定的项目中使用不同的名称或e-mail地址，你可以在该项目中运行该命令而不要--global选项。<br>
+            总之<b>--global为全局配置，不加为某个项目的特定配置</b>。</dd>
+    <hr>
+    <h3>Git init（初始化）</h3>
+        <dt>git init</dt>
+        <dd>初始化，此时默认处于<strong>主分支（master）</strong>中</dd>
+        <dd><em>此时文件夹中出现  .git 隐藏文件夹</em></dd>
+        <dt>echo "文件中要添加的内容" > test001.md</dt>
+        <dd>新建文件并写入内容</dd>
+        <dt>git status</dt>
+        <dd>查看状态</dd>
+        <dt>git add test001.md</dt>
+        <dd>从工作区（unstage状态）添加到缓存区</dd>
+        <dd>有时会出现<br>
+            warning: in the working copy of 'test001.md', LF will be replaced by CRLF the next time Git touches it<br>
+            此时文件其实已成功被add
+            </dd>
+    <hr>
+    <h3>Git commit（提交）</h3>
+        <dt>git commit</dt>
+        <dd>提交<br>
+            回车后会进入vim编辑器<br>
+            git 会生成前面带有#的消息（不可见），删去#即为可见<br>
+            输入 i 插入信息（进入编辑模式）（页面下方出现 INSERT 字样）<br>
+            光标默认处在第一行<br>
+            输完后点击 esc 退出编辑模式<br>
+            输入 :wq 保存并退出 vim编辑器，回到git页面<br>
+            此时页面会提示修改的内容</dd>
+        <dt>git commit -m "新增的内容"</dt>
+        <dd>适合简短的提交信息，不需要进入到vim编辑器</dd>
+        <dt>git commit -a -m "添加的内容"</dt>
+        <dd>commit 和 add 可以一起写，直接从工作区到本地版本库</dd>
+        <dd>还可以更进一步写成
+            git commit -am（am合在一起写）
+            </dd>
+        <dt>git log</dt>
+        <dd>查看提交过的版本</dd>
+    <hr>
+    <h3>Git branch（分支）</h3>
+        <dt>git branch xindefenzhi</dt>
+        <dd>创建新的分支（但不会立即跳转到新的分支）</dd>
+        <dt>git branch</dt>
+        <dd>查看分支（验证是否创建成功）</dd>
+        <dt>git checkout xindefenzhi</dt>
+        <dd>切换到新的分支</dd>
+        <dd>新分支的文件是直接从master主支复制过来的，在新的分支中操作文件（例如删除）不会影响主分支，（只要切换回主分支，所有删除的文件都会回来，除了被手动忽略掉的文件</dd>
+        <dt>git branch -d xindefenzhi</dt>
+        <dd>删除分支<br>
+            此时会提示<br>
+            error: the branch 'xindefenzhi' is not fully merged（完全合并）<br>
+            hint: If you are sure you want to delete it, run 'git branch -D xindefenzhi'<br>
+            hint: Disable this message with "git config advice.forceDeleteBranch false"</dd>
+        <dt>git branch -D xindefenzhi</dt>
+        <dd>确定删除</dd>
+        <dt>git checkout -b xindefenzhi2</dt>
+        <dd>创建并跳转到新分支</dd>
+        <dt>git merge xindefenzhi2</dt>
+        <dd>把别的分支合并到当前所处的分支上</dd>
+    <hr>
+        <dt>git clone [URL]</dt>
+        <dd>拷贝远程链接<br>
+            在拷贝过来的文件夹中打开git，<b>此时默认主支名为main</b>
+            </dd>
+        <dt>git remote -v</dt>
+        <dd>查看本地仓库和远程仓库的联系<br>
+            回车后会显示<br>
+            origin  https://github.com/thatsme945/test001.git (fetch)<br>
+            origin  https://github.com/thatsme945/test001.git (push)<br>
+            git默认用 origin 表示远程仓库的名字，可在 push 时用来代替URL
+            </dd>
+        <dt>git push</dt>
+        <dd>更新到远程仓库</dd>
+    </dl>
+    <h3>忽略文件</h3>
+        <p><b>touch .gitignore</b><br>
+        创建 .gitignore 文件<br>
+        在 .gitignore 文件中填写要忽略的文件.后缀
+        </p>
+    
+
+
+
+
+
+
+    <hr>
+    <p>查看更多GIT使用方法，请转到<a href="https://mp.weixin.qq.com/s/Bf7uVhGiu47uOELjmC5uXQ">狂神聊Git</a>
+    <br>也可观看<a href="https://www.bilibili.com/video/BV1FE411P7B3/">视频</a></p>
+    <p><a href="https://blog.csdn.net/sphinx1122/article/details/89789929">git add 多个文件和文件夹的方法</a></p>
+</body>
+</html>

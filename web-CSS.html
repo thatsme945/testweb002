@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="styles/style003.css" rel="stylesheet" /> -->
+    <!-- <link href="styles/style-CSS.css" rel="stylesheet"> -->
+    <!--   rel ：( relation ：关系）说明引入的文档与当前文档之间的关系。 -->
+</head>
+<body>
+    <h1>CSS基础</h1>
+    <h2>目录</h2>
+    <dl>
+        
+        <dt><a href="#box">CSS 布局</a></dt>
+        <dt><a href="#syntax">CSS 规则集语法</a></dt>
+        <dt><a href="#text001">CSS规则集语法</a></dt>
+        <dt><a href="#text001">CSS规则集语法</a></dt>
+    </dl>
+    <hr>
+    <pre>
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference">CSS 参考</a>
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/width#%E5%83%8F%E7%B4%A0_px_%E5%92%8C%E5%AD%97%E9%AB%98_em">像素 px 和字高 em</a><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F">另见-字体大小</a>
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Shorthand_properties">CSS 的简写属性</a>
+    
+
+    </pre>
+    <hr>
+    <h2>CSS 样式表</h2>
+    <p>CSS 应用于文档的三种方法：<br>
+        使用外部样式表、使用内部样式表和使用内联样式。</p>
+    <dl>
+    <dt>外部样式表</dt>
+    <dd>外部样式表在一个单独的扩展名为 .css 的文件中包含 CSS。<br>
+        可以将一个 CSS 文件链接到多个网页上，用同一个 CSS 样式表为所有网页确定样式。</dd>
+    <dd>使用 HTML &lt;link&gt; 元素来链接外部样式表文件：<br>
+    <pre> &lt;link rel="stylesheet" href="styles.css" /&gt;</pre></dd>
+    <dt>内部样式表</dt>
+    <dd>一个内部样式表驻留在 HTML 文档内部。<br>
+        创建一个内部样式表，要把 CSS 放置在包含在 HTML &lt;head&gt; 元素中的 &lt;style&gt; 元素内。<br>
+    <pre>111</pre></dd>
+    <dt>内联样式</dt>
+    <dd>内联样式是影响单个 HTML 元素的 CSS 声明，包含在元素的 style 属性中。<br>
+    <pre>111</pre></dd>
+    </dl>
+    <pre>
+        外部样式表是将 CSS 应用到文档中最常见和最有用的方法。
+        内部样式表对于有多个页面的网站不方便。
+        尽可能避免以内联样式的方式使用 CSS，这对 CSS 的维护效率最低。
+    </pre>
+    <h3>样式表的优先级</h3>
+    <p>CSS 语言有一些规则来控制在发生冲突的情况下哪个选择器更强大。这些规则被称为<strong>层叠（cascade）</strong>和<strong>优先级（specificity）</strong>。</p>
+    <p><strong>层叠规则</strong>：后面的样式会替换样式表中较早出现的冲突样式。</p>
+    <p><strong>优先级规则</strong>：内联样式 > 内部样式 = 外部样式</p>
+    <hr>
+    <!-- ------------------------------------------------------------------------------------- -->
+    <h2>CSS 选择器</h2>
+    <h3>选择器列表</h3>
+    <p>多个使用相同样式的 CSS 选择器可以被混编为一个<strong>选择器列表</strong>。<br>
+    只需要在它们之间加上逗号。<br>
+    （空格可以在逗号前或后，如果每个选择器都另起一行，会更好读些。）</p>
+    <p>使用选择器列表时，<b>如果任何一个选择器无效 (存在语法错误)，那么整条规则都会被忽略。</b></p>
+    <h3>选择器的种类</h3>
+    <dl>
+        <dt>类型、类和 ID 选择器</dt>
+        <dd><strong>类型选择器</strong>：有时也叫做“标签名选择器”或者是“元素选择器”，因为它在文档中选择了一个 HTML 标签/元素。</dd>
+        <dd><strong>全局选择器</strong>：由一个星号（*）代指，它选中了文档中的所有内容（或者是父元素中的所有内容，比如，它紧随在其他元素以及邻代运算符之后的时候）。</dd>
+
+        <dt>标签属性选择器</dt>
+        <dt>伪类与伪元素</dt>
+    </dl>
+
+
+    <hr>
+    <!-- ------------------------------------------------------------------------------------- -->
+    <h3 id="box">CSS 布局</h3>
+    <p>CSS 布局主要是基于<strong>盒子模型</strong>。在页面上占用空间的每个盒子都有类似的属性：</p>
+    <ul>
+        <li>padding（内边距）：是指内容周围的空间。</li>
+        <li>border（边框）：是紧接着内边距的线。</li>
+        <li>margin（外边距）：是围绕元素边界外侧的空间。</li>
+    </ul>
+    <p>其他：</p>
+    <ul>
+        <li>width：元素的宽度</li>
+        <li>background-color：元素内容和内边距底下的颜色</li>
+        <li>color：元素内容（通常是文本）的颜色</li>    
+        <li>text-shadow：为元素内的文本设置阴影</li>
+        <li>display：设置元素的显示模式</li>
+    </ul>
+    <hr>
+    <!-- ------------------------------------------------------------------------------------- -->
+    
+    <h3 id="syntax">CSS 规则集语法</h3>
+    <ul>
+        <li>CSS 语法由一个 <strong>选择器（selector）</strong>起头。它选择了我们将要用来添加样式的 HTML 元素。</li>
+        <li>接着输入一对大括号 { }。在大括号内部定义一个或多个形式为<b>属性（property）—值（value）对</b>的声明。<br>
+            每个声明都指定了我们所选择元素的一个属性，之后跟一个我们想赋给这个属性的值。</li>
+        <li>除了选择器部分，每个规则集都应该包含在成对的大括号里（{}）。</li>
+        <li>在每个声明里要用冒号（:）将属性与属性值分隔开。<br>
+            冒号之前是属性，冒号之后是值。不同的 CSS 属性对应不同的合法值。</li>
+        <li>在每个规则集里要用分号（;）将各个声明分隔开。</li>    
+    </ul>
+    <p>当一个属性与一个值配对时，这种配对被称为 <strong>CSS 声明</strong>。CSS 声明可以在 <strong>CSS 声明块</strong>中找到。<br>
+        CSS 声明块与选择器配对，以生成 <strong>CSS 规则集</strong>（或称 CSS 规则）。</p>
+    <hr>
+    <!-- -------------------------------------------------------------------------------------- -->
+    <h3>margin 属性 和 padding 属性</h3>
+    <p>margin 属性为给定元素设置所有四个（上右下左）方向的外边距。<br>
+        也就是 margin-top、margin-right、margin-bottom 和 margin-left 四个外边距属性设置的简写。</p>
+    <p>上、下外边框的设置对<strong>*不可替换*内联元素</strong>，如 span 和 code，无效。</p>
+    <p>外边距控制的是元素外部空出的空间。相反，padding 操作元素内部空出的空间。</p>
+   
+    <p>
+        margin 属性接受 1~4 个值。每个值可以是 &lt;length&gt;（以固定值为内边距） <br>
+        或 &lt;percentage&gt;（相对于包含块的宽度，以百分比值为内边距），<strong>或 auto。取值为负时元素会比原来更接近临近元素。</strong>
+        <ul>
+            <li>当只指定一个值时，该值会统一应用到全部四个边的外边距上。</li>
+            <li>指定两个值时，第一个值会应用于上边和下边的外边距，第二个值应用于左边和右边。</li>
+            <li> 指定三个值时，第一个值应用于上边，第二个值应用于右边和左边，第三个则应用于下边的外边距。</li>
+            <li>指定四个值时，依次（顺时针方向）作为上边，右边，下边，和左边的外边距。</li>
+        </ul>
+    </p>
+    <p>
+        padding 属性接受 1~4 个值。每个值可以是 &lt;length&gt;（以固定值为内边距） <br>
+        或 &lt;percentage&gt;（相对于包含块的宽度，以百分比值为内边距）。<strong>取值不能为负。</strong>
+        <ul>
+            <li>当只指定一个值时，该值会统一应用到全部四个边的内边距上。</li>
+            <li> 指定两个值时，第一个值会应用于上边和下边的内边距，第二个值应用于左边和右边。</li>
+            <li>指定三个值时，第一个值应用于上边，第二个值应用于右边和左边，第三个则应用于下边的内边距。</li>
+            <li>指定四个值时，依次（顺时针方向）作为上边，右边，下边，和左边的内边距。</li>
+        </ul>
+    </p>
+   
+    <hr>
+    <h2>样式化文本</h2>
+    <p>元素中的文本是布置在元素的内容框中。以内容区域的左上角作为起点 (或者是右上角，在 RTL 语言的情况下)，一直延续到行的结束部分。一旦达到行的尽头，它就会进到下一行，然后继续，再接着下一行，直到所有内容都放入了盒子中。<br>
+        文本内容表现地像一些内联元素，被布置到相邻的行上，除非到达了行的尽头，否则不会换行，或者你想强制地，手动地造成换行的话，你可以使用 &lt;br&gt; 元素。</p>
+    <p>用于样式文本的 CSS 属性通常可以分为两类：</p>
+    <ul>
+    <li>字体样式: 作用于字体的属性，会直接应用到文本中，比如使用哪种字体，字体的大小是怎样的，字体是粗体还是斜体，等等。</li>
+    <li>文本布局风格: 作用于文本的间距以及其他布局功能的属性，比如，允许操纵行与字之间的空间，以及在内容框中，文本如何对齐。</li>
+    </ul>
+    <p>color 属性设置选中元素的前景内容的颜色 (通常指文本，不过也包含一些其他东西，或者是使用 text-decoration 属性放置在文本下方或上方的线 (underline overline)。)</p>
+    <p>font-family 属性允许你为浏览器指定一个字体 (或者一个字体的列表)，然后浏览器可以将这种字体应用到选中的元素上。浏览器只会把在当前机器上可用的字体应用到当前正在访问的网站上；如果字体不可用，那么就会用浏览器默认的字体代替 default font. </p>
+    <p>font-family 允许你通过给定一个有先后顺序的，由字体名或者字体族名组成的列表来为选定的元素设置字体。</p>
+    <pre>
+        font-family 属性指定的是一个优先级从高到低的字体列表。
+        字体的选定不是在发现用户计算机上安装的列表中的第一个字体时停止。相反，对字体的选择是逐字进行的。
+        也就是说即使某个字符周围都在某个字体中可以显示，但该字符在当前的字体文件中没有适合的图形，那么会继续尝试列表中靠后的字体。
+        当一个字体只在某些特定的样式、变体或大小下有效时，这些属性的值也可能对字体族的选择造成影响。
+    </pre>
+    <p>元素的 <strong>font-size 属性</strong>是从该元素的<strong>父元素</strong>继承的。所以这一切都是从整个文档的根元素——&lt;html&gt;开始，<br>
+        <b>浏览器的 font-size 标准设置的值为 16px。</b>在根元素中的任何段落 (或者那些浏览器没有设置默认大小的元素)，会有一个最终的大小值：16px。<br>
+        其他元素也许有默认的大小，比如 <b>&lt;h1&gt; (en-US) 元素有一个 2em 的默认值</b>，所以它的最终大小值为 32px。</p>
+    <pre>包含在元素中的文本是作为一个单一的实体。
+        你不能将文字其中一部分选中或添加样式，
+        如果你要这么做，那么你必须要用适合的元素来包装它们，
+        比如 ( &lt;span&gt; 或者 &lt;strong&gt;), 或者使用伪元素，
+        像 ::first-letter (选中元素文本的第一个字母), 
+        ::first-line (选中元素文本的第一行), 
+        或者 ::selection (当前光标双击选中的文本)</pre>
+        <p>
+            text-shadow 属性对元素的文本内容施加阴影。它的四个值是：
+            <ul>
+                <li>第一个像素值设置阴影与文本的水平偏移量：它横移的距离。</li>
+                <li>第二个像素值设置阴影与文本的垂直偏移量：它向下移动的距离。</li>
+                <li>第三个像素值设置阴影的模糊半径。一个更大的值会产生一个更模糊的阴影。</li>
+                <li>第四个值设置阴影的基色。</li>
+            </ul>
+        </p>
+        <hr>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration">text-decoration (简写) 属性设置文本上的装饰性线条的外观</a><br>
+    <p>text-decoration 属性由一个或多个用空格分隔的值组成，表示各种普通文本装饰属性。</p>
+    <p>text-decoration: 设置/取消字体上的文本装饰 (你将主要使用此方法在设置链接时取消设置链接上的默认下划线。)</p>
+    <pre>文本装饰会覆盖子孙文本元素。
+        这意味着如果一个元素指定了文本装饰，那么子元素无法去除这个装饰。
+        例如，在标记 &lt;p&gt;This text has &lt;em&gt;some emphasized words&lt;/em&gt; in it.&lt;/p&gt; 中，
+        样式规则 p { text-decoration: underline; } 
+        会导致整个段落被下划线划掉。
+        样式规则 em { text-decoration: none; } 不会有任何变化；
+        整个段落仍然会被下划线划掉。
+        但是，规则 em { text-decoration: overline; } 
+        会导致“some emphasized words”上出现第二个装饰。</pre>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F%E3%80%81%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86%E3%80%81%E6%96%87%E6%9C%AC%E8%BD%AC%E6%8D%A2%E5%92%8C%E6%96%87%E6%9C%AC%E8%A3%85%E9%A5%B0">字体样式、字体粗细、文本转换和文本装饰</a>
+        <hr>
+    <h2>CSS 常用单位</h2>
+    <ul>
+        <li>px (像素): <br>
+            将像素的值赋予给你的文本。<br>
+            这是一个<strong>绝对单位</strong>，它导致了在任何情况下，页面上的文本所计算出来的像素值都是一样的。</li>
+        <li>em: <br>
+            1em 等于我们设计的当前元素的父元素上设置的字体大小 <br>
+            (更加具体的话，比如包含在父元素中的大写字母 M 的宽度) <br>
+            如果你有大量设置了不同字体大小的嵌套元素，这可能会变得棘手，但它是可行的，你可以使用em调整任何东西的大小，不只是文本。你可以有一个单位全部都使用 em 的网站，这样维护起来会很简单。</li>
+        <li>rem: <br>
+            这个单位的效果和 em 差不多，除了 1rem 等于 HTML 中的根元素的字体大小，而不是父元素。<br>
+            这可以让你更容易计算字体大小，但是遗憾的是， rem 不支持 Internet Explorer 8 和以下的版本。<br>
+            如果你的项目需要支持较老的浏览器，你可以坚持使用em 或 px</li>
+    </ul>
+    <pre>
+        当调整你的文本大小时，将文档 (document) 的基础 font-size 设置为 10px 往往是个不错的主意，
+        这样之后的计算会变得简单，所需要的 (r)em 值就是想得到的像素的值除以 10，而不是 16。
+        做完这个之后，你可以简单地调整在你的 HTML 中你想调整的不同类型文本的字体大小。
+        在样式表的指定区域列出所有font-size的规则集是一个好主意，这样它们就可以很容易被找到。
+    </pre>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units">另见 CSS 的值与单位</a>
+    <hr>
+    <p>在 CSS 中，transparent(透明) 是一种颜色。</p>
+   </body>
+</html>

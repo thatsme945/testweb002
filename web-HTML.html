@@ -1,0 +1,490 @@
+<!--按住shift键并用鼠标左键右滑可以打开cmd-->
+<!DOCTYPE html>
+<!--<!DOCTYPE>是声明标签，必须位于文档最前面，处于<html>标签之前。 -->
+<html lang="zh-CN">
+  <!--用lang属性为站点设定语言-->  
+<head>
+  <!--头文件中常使用 CSS 来让网页有丰富多彩的外观，并使用 JavaScript 来让网页有交互功能-->
+   
+    <meta charset="UTF-8">
+    <!--指定了文档的字符编码——在这个文档中被允许使用的字符集-->
+    <meta name="author" content="ZYC" />
+    <!-- 定义页面的作者 -->
+    <!-- name 指定了 meta 元素的类型；说明该元素包含了什么类型的信息。 -->
+    <!-- content 指定了实际的元数据内容。 -->
+    <meta name="description" content="这是由ZYC编写的一个测试网站" />
+    <!-- 提供页面的简要描述 -->
+    <link rel="icon" href="images/icon.png" type="image/png" />
+    <!-- 设置网页图标 -->
+
+    <!--链接样式表:引用CSS文件：-->
+    <link rel="stylesheet" href="styles/style-HTML.css" />
+    <!--<link> 元素经常位于文档的头部，它有 2 个属性，rel="stylesheet" 表明这是文档的样式表，而 href 包含了样式表文件的路径-->
+
+    <!--引用script文件：-->
+    <script src="my-js-file.js" defer></script>
+    <!--包含 src 属性来指向需要加载的 JavaScript 文件路径，同时最好加上 defer 以告诉浏览器在解析完成 HTML 后再加载 JavaScript-->
+
+
+    <title>ZYC的测试网站</title>
+    <style>
+    </style>
+    <!--若要给不同元素设置相同属性，可以用逗号隔开-->
+    <!-- style标签内好像不能添加注释，添加后其下一行操作无法生效 -->
+</head>
+<body style="background-color: #daffff"></body>
+<!--用来设置页面背景颜色-->
+<body>
+  <!-- 设置页眉 -->
+  <header>
+    <!-- 本站所有网页的统一主标题 -->
+    <a class="logo" href="images/top-picture.jpg">ZYC的测试网站</a>
+ 
+    <nav>
+      <!-- 设置导航栏 -->
+      <ul>
+        <li><span>||</span></li>
+        <li><a href="#">主页</a></li>
+        <li><span>|</span></li>
+        <li><a href="#">目录</a></li>
+        <li><span>|</span></li>
+        <li><a href="#">图片</a></li>
+        <li><span>|</span></li>
+        <li><a href="#">代码</a></li>
+        <li><span>|</span></li>
+        <li><a href="#">注释</a></li>
+        <li><span>||</span></li>
+      </ul>
+    </nav>
+  <p></p>  
+    <form align="center">
+        <!-- 搜索栏是站点内导航的一个非线性的方式。 -->
+        <input type="search" name="q" placeholder="请输入要搜索的内容" />
+        <input type="submit" value="搜索" />
+        <!-- 此部分功能未完善 -->
+      </form>
+      <p></p>
+      <hr>
+  </header>
+
+  <article>
+    <header>
+      <h1 align="center">这是一份写得乱七八糟的HTML笔记</h1>
+      <p align="center"><em style="color:#5B65A1">by ZYC</em><br>
+        <em style="color:#5B65A1"><time datetime="2024-3-17">2024.3.17</time></em></p>
+      <!-- 注意居中属性不可加在time或em里 -->
+    </header>
+     </article>
+     <hr>
+    <p>本文档用于学习
+    <strong>HTML</strong>，即（<b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage，超文本标记语言）</p>
+    <p>在代码的第一行敲下一个<b>一个英文字母（ ! ）</b>即可获得十一行代码框架，快速开始编写HTML文档。</p>
+    
+    <!--注释是这样写的-->
+<p style="color:red">注意用&lt!--注释--&gt来写注释，使用Ctrl+/快捷转为注释。</p>
+    <h2 align="center">目录</h2>
+    <dl>
+    <dt><a href="#text001">一、文本处理</a></dt>
+    <dt><a href="#text002">二、属性（arrtibute）</a></dt>
+    <dt><a href="#text003">三、列表（list）</a></dt>
+      <dd><a href="#3.1">无序列表（ unordered list ）</a></dd>
+      <dd><a href="#3.2">有序列表（ ordered list ）</a></dd>
+      <dd><a href="#3.3">描述列表（description list）</a></dd>
+    <dt><a href="#text004">四、链接（links）</a></dt>
+      <dd><a href="#4.1">块级链接</a></dd>
+      <dd><a href="#4.2">图片链接</a></dd>
+      <dd><a href="#4.3">URL与path（路径）</a></dd>
+      <dd><a href="#4.4">文档片段</a></dd>
+      <dd><a href="#4.5">绝对 URL 和相对 URL</a></dd>
+      <dd><a href="#4.6">链接到非HTML资源</a></dd>
+      <dd><a href="#4.7">电子邮件链接</a></dd>
+    <dt><a href="#text005">五、引用（quotes）</a></dt>
+      <dd><a href="#5.1">块引用(Blockquotes)</a></dd>
+      <dd><a href="#5.2">行内引用(quote)</a></dd>
+      <dd><a href="#5.3">引文</a></dd>
+      <dd><a></a></dd>
+    <dt><a href="#text006">六、缩略语（acronyms）</a></dt>
+    <dt><a href="#text007">七、其他标记</a></dt>
+      <dd><a href="#7.1">标记联系方式</a></dd>
+      <dd><a href="#7.2">展示计算机代码</a></dd>
+      <dd><a href="#7.3">标记时间和日期</a></dd>
+      <dd><a href="#7.4">表示上下标</a></dd>
+      <dd><a href="#7.5">表格标签</a></dd>
+      <dd><a href="#7.6">表单标签</a></dd>
+   </dl>
+
+
+   <h2 id="text001">一、文本处理</h2>
+    <p>用&lt;p&gt;将文字封装成一个段落(Paragraph)元素，段落元素首行不缩进，但会空一行</p>
+    <pre>在段落元素中连续多个空格符会被省略为一个</pre>
+    <p><em>用&lt;em&gt;将文字变成斜体强调（emphasis），也可使用&lt;i&gt;</em></p>
+    <strong>用&lt;strong&gt;将文字变成加粗强调，也可使用&lt;b&gt; </strong>
+
+  
+    <h1>h1标签内包含着主标题</h1>
+    <!--最好只对每个页面使用一次 <h1>——这是顶级标题，所有其他标题位于层次结构中的下方-->
+    <h2>h2是二级子标题</h2>
+    <h3>h3是三级子标题</h3>
+    <h4>以此类推</h4>
+    
+
+    <p>在标签里<em> 还可以 </em>像这样<strong>嵌套</strong>，就好像<em>大括号里的小括号</em>，所以要注意对应关系</p>
+    <p><strong>内联元素（inline elements）</strong>（或叫<em>行内元素</em>）不换行，如<em>&lt em &gt</em></p>
+    <p>而<strong>块级元素（block-level elements）</strong>换行，如&lt p &gt</p>
+    <p>在想要换行的地方输入&ltbr&gt也可以换行</p>
+    <p>只输入一个&ltp&gt会产生一个空白行,输入&ltp&gt&lt/p&gt的作用与此相同</p>
+    <pre>
+        在&ltpre&gt里的内容保持原来的文本排版格式，
+      原来怎么分的行，就怎么分，
+    不用再加&ltbr&gt，
+  但是字体变了欸，还要再研究研究
+话说这个用来做注释岂不是很棒？
+    </pre>
+    <strong>空元素</strong><p>只有一个标签，通常用来在此元素所在位置插入/嵌入一些东西。<br>
+    比如&ltimg&gt可以在页面插入一张指定的图片，就像这样：<br></p>
+    <img
+  src="https://atts.w3cschool.cn/attachments/image/20210629/1624949245622297.png"
+  alt="常用特殊HTML字符表" 
+  id="address"/>
+  <pre>
+    补充：单引号为&apos。
+    
+    但我发现写在这些特殊字符代码
+    （比如 &amplt 和 &ampgt 甚至是 &ampnbsp ）
+    前后的空格也都会被打印出来欸
+    只不过用 &ampnbsp 打印出来的空格是平时键盘输入的空格的两倍大 大  大&nbsp欸
+    &ensp，&emsp，&trade在我现在写的这几种标签里好像都识别不了欸
+    引号(")可以直接打出来，好像不需要用到&ampquot
+  </pre></p>
+  
+  <h2 id="text002">二、属性（arrtibute）</h2>
+    <p>
+    属性必须包含：
+
+    一个空格，它在属性和元素名称之间。
+    如果一个元素具有多个属性，则每个属性之间必须<strong>由空格分隔</strong>。
+    属性名称，后面跟着一个<strong>等于号</strong>。
+    一个属性值，由<strong>一对引号（""）</strong>引起来。</p>
+
+
+
+    <h3><strong>&lt a &gt（锚元素）</strong>的herf属性（超文本引用）</h3>
+        <pre style="color:rgb(100, 200, 200);">
+        herf值是超链接所指向的 URL。
+        链接不限于基于 HTTP 的 URL，
+
+        它们可以使用浏览器支持的任何 URL 协议：
+
+        使用文档片段链接到页面的某一段
+        使用文本片段链接到某一段文字
+        使用媒体片段链接到某个媒体文件
+        使用 tel: URL 链接到一个电话号码
+        使用 mailto: URL 链接到一个邮箱地址</pre></p>
+        <p>锚元素可以像这样使用：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a" title="点击跳转到MDN学习网站">点击此处查看&lta&gt的进一步说明</a></p>
+        
+      <p>无论你在 HTML 元素的内容中使用多少空格（包括一个或多个空白字符或换行），当渲染这些代码的时候，HTML 解释器会将连续出现的空白字符减少为一个单独的空格符。</p>
+      
+      <p>Japanese example: <span lang="ja">ご飯が熱い。</span>.</p>
+      <p>可以用span的lang属性将文档的分段设置为不同的语言,以便于网页朗读等</p>
+    
+
+      <h2 id="text003">三、列表</h2>
+      <p>用ul标记无序列表（ unordered list ），用ol标记有序列表（ ordered list ）</p>
+      <p>用li元素（ list ）把每个列出的项目单独包裹起来</p>
+      <h3 id="3.1">无序列表（ unordered list ）演示：</h3>
+      <ul>
+        <li>豆浆</li>
+        <li>油条</li>
+        <li>豆汁</li>
+        <li>焦圈</li>
+      </ul>
+      <h3 id="3.2">有序列表（ ordered list ）演示：</h3>
+      <ol>
+        <li>沿这条路走到头</li>
+        <li>右转</li>
+        <li>直行穿过第一个十字路口</li>
+        <li>在第三个十字路口处左转</li>
+        <li>继续走 300 米，学校就在你的右手边</li>
+      </ol>
+
+      <h3 id="3.3">描述列表（description list）演示：</h3>
+      <dl>
+      <dt>外闭合标签</dt>
+      <dd>描述列表使用与其他列表类型不同的闭合标签——&ltdl&gt（description list）；</dd>
+      <dt>每一个项目</dt>
+      <dd>此外，每一项都用 &ltdt&gt（description term）元素闭合。</dd>
+      <dt>对项目的描述</dt>
+      <dd>每个描述都用 &ltdd&gt（description definition）元素闭合。</dd>
+      </dl>
+      
+      <h2 id="text004">四、链接(links)</h2>
+      <p>HTML使用锚点元素&lt a &gt来设置超文本链接。并为&lt a &gt添加 href 属性（超文本引用）、title 属性（鼠标悬停显示的内容）等.</p>
+      <pre>
+        人们强烈地将下划线与超链接联系起来。
+        因此，在网页中，最好只给链接加下划线。
+        <u>只在语义上合适的时候使用 &lt u &gt元素为文本添加下划线</u></pre>
+      <h3 id="4.1">块级链接</h3>
+      <a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks" title="点击此块级元素跳转到mdn学习网站">
+        <em>只需要把块级元素包裹在锚点元素&lt a &gt内即可，就像这样</em></a>
+      <h3 id="4.2">图片链接</h3>
+      <p>另见：<a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"><strong style="color: red;">多媒体嵌入</strong></a></p>
+      <p>使用 a 元素来包裹要引用图片的 img 元素</p>
+      <strong>例如:</strong><br>
+      <a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks" title="点击此图片跳转到mdn学习网站">
+        <img src="images/mdn-logo.svg" alt="MDN Web 文档主页" />
+      </a>
+      <pre>svg格式的图片（矢量图形）插入到网页时,会随窗口大小适配</pre>
+
+
+      <h3 id="4.3">URL与path（路径）</h3>
+      <p><strong>统一资源定位符（Uniform Resource Locator，URL）</strong>是一个定义了在网络上的位置的一个文本字符串。</p>
+      <p>URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件所在的位置。</p>
+      <p>根目录称为 creating-hyperlinks。当在本地处理网站时，你会有一个包含整个网站的目录。</p>
+      <ul>
+        <li><strong>指向当前目录:</strong>只需要指定想要链接到的文件名。因为它与当前文件是在同一个目录的。<br>
+        <strong>格式:</strong>文件名.后缀<p></li>
+        <li><strong>指向子目录:</strong>需要先进入项目目录，然后通过指定目录的名称，然后是正斜杠，然后是文件的名称指明要链接到的文件。<br>
+        <strong>格式:</strong>子目录名称/文件名.后缀<p></p></li>
+        <li><strong>指向上级目录:</strong>必须先返回上级目录，然后再回到指定目录。“返回上一个目录级”使用两个英文点号表示（..）<br>
+        <strong>格式:</strong>../同级目录名称/文件名.后缀<p></p></li>
+      </ul>
+
+      <h3 id="4.4">文档片段</h3>
+      <p>超链接除了可以链接到文档外，也可以链接到 HTML 文档的特定部分（被称为文档片段）。<br>
+        要做到这一点，必须首先给要链接到的元素分配一个 id 属性。</p>
+        <p>为了链接到那个特定的 id，要将它放在 URL 的末尾，并在前面包含井号（#）</p>
+        <p><strong>格式:</strong>文件名.后缀#要链接内容的id属性值</p>
+        <p>若是在同一份文档下链接,则不需要写URL,直接写#id属性值</p>
+        <p><strong>例如:</strong><a href="#address">点击跳转到上面的常用特殊HTML字符表</a></p>
+        
+        <h3 id="4.5">绝对 URL 和相对 URL</h3>
+        <p>即绝对链接和相对链接.</p>
+        <p><strong>绝对 URL：</strong>指向由其在 Web 上的绝对位置定义的位置，包括协议和域名。<br>
+          不管绝对 URL 在哪里使用，它总是指向确定的相同位置。</p>
+        <p><strong>相对 URL：</strong>指向与你链接的文件相关的位置。<br>
+          一个相对的 URL 将指向不同的位置，这取决于引用的文件的实际位置。
+        </p>
+
+        <h3 id="4.6">链接到非HTML资源</h3>
+        <p>当链接到要下载的资源而不是在浏览器中打开时,<br>
+          可以使用 download 属性为要下载的资源提供一个默认的保存文件名。</p>
+          <strong>例如:</strong>
+          <a
+            href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN"
+            download="firefox-latest-64bit-installer.exe">
+            下载最新的 Firefox 中文版 - Windows（64 位）</a>
+
+        <h3 id="4.7">电子邮件链接</h3>
+        <p>当点击一个链接或按钮时，可能会开启新的邮件的发送而不是连接到一个资源或页面。<br>
+          这种场景可以使用 &lta&gt 元素和 mailto: URL 协议实现。</p>
+          <pre>
+            实际上，电子邮件地址是可选的。如果你省略了它,
+            （也就是说，你的 href 属性仅仅只是简单的“mailto:”）
+            发送新的电子邮件的窗口也会被用户的邮件客户端打开，
+            只是没有收件人的地址信息，这通常在“分享”链接是很有用的，
+            用户可以给他们选择的地址发送邮件。</pre>
+            <p>除了电子邮件地址，你还可以提供其他信息。事实上，任何标准的邮件头字段可以被添加到你提供的 mailto URL 中。其中最常用的是主题（subject）、抄送（cc）和主体（body）（这不是一个真正的标头字段，但允许你为新邮件指定一个简短的内容消息）。每个字段及其值被指定为查询项。</p>
+        <strong>例如:</strong>
+        <a
+        href="mailto:thatsme@qq.com?cc=thewise2021@outlook.com&bcc=thewise2021@outlook.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+        发送含有 cc、bcc、主题和主体的邮件
+        </a>
+<!--收件人和抄送之间用?隔开,其他项目用&隔开,不可回车或空格,否则无法正常显示-->
+
+        <h2 id="text005">五、引用</h2>
+
+        <h3 id="5.1">块引用(Blockquotes)</h3>
+        <P>将块级内容(block-level quote)（一个段落、多个段落、一个列表等）<br>
+          用 &lt;blockquote&gt; 元素包裹起来表示，并且在 cite 属性里用 URL 来指向引用的资源。</p>
+        <strong>对比:</strong>
+          <p>
+            The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+            <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an
+            extended quotation.
+          </p>
+        <strong>和:</strong>
+        <p>Here is a blockquote:</p>
+        <blockquote
+         cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
+        <p>
+        The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+        <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an extended quotation.
+        </p>
+        </blockquote>
+        <p>浏览器的默认样式会将其呈现为<strong>缩进的段落</strong>，作为引用的指示</p>
+<!-- ---------------------------------------------------------------------- -->
+        <h3 id="5.2">行内引用(quote)</h3>
+        <P>用于不需要与正文隔开的引用方式,类似于文章中引用了一句名言。<br>
+          浏览器默认将其作为普通文本<strong>放入引号内</strong>表示引用<br>
+          除了使用 &ltq&gt 元素以外，行内元素用与上面相同的方式工作。</P>
+        <strong>例如:</strong>
+        <p>
+          The quote element — <code>&lt;q&gt;</code> — is
+          <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
+            >intended for short quotations that don't require paragraph breaks.</q
+          >
+        </p>
+<!-- --------------------------------------------------------------------------- -->
+        <h3 id="5.3">引文</h3>
+        <p>如果不使用 JavaScript 或 CSS 编写自己的解决方案，就没有办法让浏览器显示 cite 的内容。<br>
+          如果你想在页面上提供引文的来源，你需要在文本中通过链接或其他适当的方式来提供它。</p>
+        <p>这里有<strong> &lt;cite&gt; </strong>元素，但它是为了包含所引用资源的标题（如书名）。<br>
+          然而，你没有理由不把 &lt;cite&gt; 内的文字以某种方式链接到引用源。<br>
+        可以使用&lt;a&gt;锚元素链接到引用出处</p>
+        <p>引文默认的字体样式为<strong>斜体</strong>。</p>
+        <strong>例如:</strong>
+        <p>
+          <strong style="color:lightseagreen">&lt;--正文--</strong>
+          According to the
+          <strong style="color:lightseagreen">--正文--&gt;></strong>
+          <strong style="color:purple">&lt;--引文--</strong>
+          <a href="/zh-CN/docs/Web/HTML/Element/blockquote" style="color:purple">
+            <cite>MDN blockquote page</cite></a
+          ><strong style="color:purple">--引文--&gt;</strong>:
+        </p>
+
+        <strong style="color:red">&lt;--块引用--</strong>
+        <blockquote
+          cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote" >
+          <p style="color:red">
+            The <strong style="color:red">HTML <code style="color:red">&lt;blockquote&gt;</code> Element</strong> (or
+            <em style="color:red">HTML Block Quotation Element</em>) indicates that the enclosed text is
+            an extended quotation.
+          </p>
+        </blockquote>
+        <strong style="color:red">--块引用--&gt;</strong>
+
+        <p>
+          <strong style="color:lightseagreen">&lt;--正文--</strong>
+          The quote element — <code>&lt;q&gt;</code> — is
+          <strong style="color:lightseagreen">--正文--&gt;></strong>
+          <strong style="color:firebrick">&lt;--行内引用--</strong>
+          <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
+          style="color:firebrick">intended for short quotations that don't require paragraph breaks.</q>
+            <strong style="color:firebrick">--行内引用--&gt;></strong>
+          — 
+          <strong style="color:purple">&lt;--引文--</strong>
+          <a href="/zh-CN/docs/Web/HTML/Element/q"> <cite style="color:purple">MDN q page</cite></a
+          ><strong style="color:purple">--引文--&gt;</strong>.
+        </p>
+<!-- ---------------------------------------------------------------------- -->
+        <h2 id="text006">六、缩略语(acronyms)</h2>
+        <p>常被用来包裹一个<strong>缩略语或缩写</strong>，并且提供缩写的解释。<br>
+         用 &ltabbr&gt 来标记缩写,为 &ltabbr&gt 标签添加<strong> title 属性</strong>来<strong>提供对缩写的解释</strong>,当鼠标置于缩略语上方时即可显示</p>
+         <strong>例如:</strong>
+        <abbr title="超文本标记语言（Hyper text Markup Language）">HTML</abbr>
+
+<!-- ------------------------------------------------------------------------ -->
+
+        <h2 id="text007">七、其他标记</h2>
+        <h3 id="7.1">标记联系方式</h3>
+        <p><strong>&lt;address&gt;元素</strong>仅仅包含联系方式,但其中可以包含更复杂的标记和不同形式的联系方式.</p>
+        <p><em>联系方式的默认表现形式为斜体</em></p>
+        <strong>一般形式:</strong>
+        <address>Chris Mills, Manchester, The Grim North, UK</address>
+
+        <strong>更多类型:</strong>
+        <address>
+          <p>
+            Chris Mills<br />
+            Manchester<br />
+            The Grim North<br />
+            UK
+          </p>
+        
+          <ul>
+            <li style="color: #6068A3">Tel: 01234 567 890</li>
+            <li style="color: #6068A3">Email: me@grim-north.co.uk</li>
+          </ul>
+        </address>
+
+        <strong>含有链接:</strong>
+        <address>
+          由 <a href="../authors/chris-mills/">Chris Mills</a> 编写的页面。
+        </address>
+        <pre>
+          备注： 
+          &lt;address&gt; 元素只能用于提供最近的 &lt;article&gt; 
+          或 &lt;body&gt; 元素所含文件的联系信息。
+          在一个网站的页脚使用它来包括整个网站的联系信息，
+          或者在一篇文章里面使用它来包括作者的联系信息，
+          这都是正确的，但不能用来标记与该页面内容无关的地址列表。</pre>
+        
+       
+        <h3 id="7.2">展示计算机代码</h3>
+        <ul>
+          <li style="color: #6068A3"><strong>&lt;code&gt;元素</strong>：用于标记计算机通用代码。</li>
+          <li style="color: #6068A3"><strong>&lt;pre&gt;元素</strong>：用于保留空白字符（通常用于代码块）<br>
+            空白将会以与你在文本编辑器中看到的相同的方式渲染出来。</li>
+          <li style="color: #6068A3"><strong>&lt;var&gt;元素</strong>：用于标记具体变量名。</li>
+          <li style="color: #6068A3"><strong>&lt;kbd&gt;元素</strong>：用于标记输入电脑的键盘（或其他类型）输入。</li>
+          <li style="color: #6068A3"><strong>&lt;samp&gt;元素</strong>：用于标记计算机程序的输出。</li>
+        </ul>
+
+        <strong>例如:</strong>
+
+        <pre><code>const para = document.querySelector('p');
+
+          para.onclick = function() {
+            alert('噢，噢，噢，别点我了。');
+          }</code></pre>
+          
+          <p>
+            请不要使用 <code>&lt;font&gt;</code> 、
+            <code>&lt;center&gt;</code> 等表象元素。
+          </p>
+          
+          <p>在上述的 JavaScript 示例中，<var>para</var> 表示一个段落元素。</p>
+          
+          <p>按 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd> 选择全部内容。</p>
+          
+          <pre>$ <kbd>ping mozilla.org</kbd>
+          <samp>PING mozilla.org (63.245.215.20): 56 data bytes
+          64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+          
+        <h3 id="7.3">标记时间和日期</h3>
+        <p><strong>&lt;time&gt;</strong> 标签用来表示一个特定的时间段。<br>
+          该元素可包含 <strong>datetime 属性</strong>，用于将日期转换为机器可读格式，<br>
+          从而获得更好的搜索引擎结果或自定义功能（如提醒）。</p>
+
+        <pre>
+        <!-- 标准简单日期 -->
+        <time datetime="2016-01-20">20 January 2016</time>
+        <!-- 只包含年份和月份-->
+        <time datetime="2016-01">January 2016</time>
+        <!-- 只包含月份和日期 -->
+        <time datetime="01-20">20 January</time>
+        <!-- 只包含时间，小时和分钟数 -->
+        <time datetime="19:30">19:30</time>
+        <!-- 还可包含秒和毫秒 -->
+        <time datetime="19:30:01.856">19:30:01.856</time>
+        <!-- 日期和时间 -->
+        <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+        <!-- 含有时区偏移值的日期时间 -->
+        <time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+        <!-- 提及特定周 -->
+        <time datetime="2016-W04">The fourth week of 2016</time>
+        </pre>
+        <p>日期时间值（机器可读的日期时间值）是该元素的 datetime 属性的值，必须采用正确的格式（见下文）。<br>
+          如果元素没有 datetime 属性，它就不能有任何元素后代，
+          <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/time"
+          title="点击查看有效的时间日期值书写格式">日期时间值</a>就是元素的子文本内容。</p>
+          
+          <h3 id="7.4">表示上下标</h3>
+          <dl>
+            <dt style="color: #6068A3">sup 和 sub 元素:</dt>
+            <dd style="color: #6068A3">用于表示上标(<strong>sub</strong>script)和下标(<strong>sup</strong>erscript);</dd>
+            <dt></dt>
+          </dl>
+
+
+       
+
+          <footer>
+             <p>想了解更多<strong>使用标签创建的 HTML 元素</strong>,请<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element"
+          title="点击跳转到MDN网站HTML 元素参考页面">点击这里</a><br>
+          © 2024 ZYC</p>
+          </footer>
+</body>
+
+</html>

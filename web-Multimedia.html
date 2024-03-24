@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>多媒体与嵌入</h1>
+    <h2>img 图片嵌入</h2>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#%E6%94%AF%E6%8C%81%E7%9A%84%E5%9B%BE%E5%83%8F%E6%A0%BC%E5%BC%8F">HTML支持的图像格式</a>
+    <p>&lt;img&gt; 元素是一个空元素（不需要包含文本内容或闭合标签），最少只需要一个 src （一般读作其全称 source）来使其生效。</p>
+    <p>src 属性是必须的，它包含了你想嵌入的图片的路径，可以是相对路径或绝对 URL，就像 &lt;a&gt; 元素的 href 属性一样。</p>
+    <p>alt 属性包含一条对图像的文本描述（非强制性），<br>
+        （对无障碍而言，屏幕阅读器会将这些描述读给需要使用阅读器的使用者听，让他们知道图像的含义。）<br>
+        如果由于某种原因无法加载图像，普通浏览器会在页面上显示 alt 属性中的备用文本：例如，网络错误、内容被屏蔽或链接过期。<br>
+        将图像复制并粘贴为文本，或是将图像的链接保存为浏览器书签时，也会用到此属性。</p>
+        <pre>如果把这个属性设置为空字符串（alt=""），
+            则表明该图像不是内容的关键部分（这是一种装饰或者一个追踪像素点），
+            非可视化浏览器在渲染 (en-US)的时候可能会忽略它。
+            而且，如果图片加载失败，可视化浏览器会隐藏表示图片损坏的图标。</pre>
+    <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#crossorigin">crossorigin 枚举属性</a>表明是否必须使用 CORS 完成相关图像的抓取。</p>
+    <p>height 和 width 属性：图像的固有高度和宽度，以像素为单位。必须是没有单位的整数值。</p>
+    <pre>
+        同时包括 height 和 width 使浏览器在加载图像之前计算图像的长宽比。
+        此长宽比用于保留显示图像所需的空间，减少甚至防止在下载图像并将其绘制到屏幕上时布局的偏移。</pre>
+    <hr>
+    <p>像 &lt;img&gt; 和 &lt;video&gt; 这样的元素有时被称之为<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a><br>
+        因为这样的元素的内容和尺寸由外部资源（像是一个图片或视频文件）所定义，而不是元素自身。</p>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element">HTML 元素参考</a><br>
+    
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Content_categories#flow_content">HTML 元素内容分类</a><br>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes#onerror">HTML 全局属性</a>
+</body>
+</html>
